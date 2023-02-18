@@ -1,0 +1,154 @@
+﻿<!--Registro de Venta-->
+<div class="col-md-3">
+    <form>
+        <h2>REGISTRAR VENTA</h2>
+        <input type="text" id="idCliente" placeholder="Ingresa el Id de cliente" class="form-control" /><br />
+        <input type="text" id="idUsuario" placeholder="Ingresa el Id de usuario" class="form-control" /><br />
+        <input type="text" id="tipo_comprobante" placeholder="Ingresa el tipo de comprobante" class="form-control" /><br />
+        <input type="text" id="serie_comprobante" placeholder="Ingresa la serie de comprobante" class="form-control" /><br />
+        <input type="text" id="num_comprobante" placeholder="Ingresa el numero de comprobante" class="form-control" /><br />
+        <input type="text" id="fecha_hora" placeholder="Ingresa la fecha (año, mes, dia)" class="form-control" /><br />
+        <input type="text" id="estado" placeholder="Ingresa el estado Aprobado/Denegado" class="form-control" />
+        <h5>Detalle de Venta</h5>
+        <input type="text" id="idVenta" placeholder="Ingresa el Id de venta" class="form-control" /><br />
+        <input type="text" id="idArticulo" placeholder="Ingresa el Id de articulo" class="form-control" /><br />
+        <input type="text" id="cantidad" placeholder="Ingresa la cantidad de productos" class="form-control" /><br />
+        <input type="text" id="descuento" placeholder="Ingresa el descuento" class="form-control" /><br />
+
+        <input type="button" class="btn btn-success" value="Guardar" id="btnGuardarVenta" />
+    </form>
+</div>
+
+
+
+<!--Registro de Persona-->
+<div class="col-md-3">
+    <form>
+        <h2>REGISTRAR PERSONA</h2>
+        <input type="text" id="tipo_persona" placeholder="Ingresa el tipo de persona (moral/fisca)" class="form-control" /><br />
+        <input type="text" id="nombre" placeholder="Ingresa el nombre" class="form-control" /><br />
+        <input type="text" id="tipo_documento" placeholder="Ingresa el tipo de documento" class="form-control" /><br />
+        <input type="text" id="num_documento" placeholder="Ingresa el numero de documento" class="form-control" /><br />
+        <input type="text" id="direccion" placeholder="Ingresa el Id de cliente" class="form-control" /><br />
+        <input type="text" id="telefono" placeholder="Ingresa el telefono" class="form-control" /><br />
+        <input type="text" id="email" placeholder="Ingresa el email" class="form-control" /><br />
+
+        <input type="button" class="btn btn-success" value="Guardar" id="btnGuardarPersona" />
+    </form>
+</div>
+
+
+
+<!--Registro de Articulo-->
+<div class="col-md-3">
+    <form>
+        <h2>REGISTRAR ARTICULO</h2>
+        <input type="text" id="idCategoria" placeholder="Ingresa el Id de categoria" class="form-control" /><br />
+        <input type="text" id="Codigo" placeholder="Ingresa el codigo" class="form-control" /><br />
+        <input type="text" id="Nombre" placeholder="Ingresa el nombre" class="form-control" /><br />
+        <input type="text" id="Precio_venta" placeholder="Ingresa precio de venta" class="form-control" /><br />
+        <input type="text" id="Stock" placeholder="Ingresa el stock" class="form-control" /><br />
+        <input type="text" id="Descripcion" placeholder="Ingresa la descripcion" class="form-control" /><br />
+        <input type="text" id="Condicion" placeholder="Ingresa la condicion (true/false)" class="form-control" /><br /><br />
+
+        <input type="text" id="identificador" placeholder="Ingresa el id del articulo" class="form-control" /><br />
+
+        <input type="button" class="btn btn-success" value="Guardar" id="btnGuardarArticulo" />
+        <input type="button" class="btn btn-primary" value="Actualizar" id="btnActualizarArticulo" />
+        <input type="button" class="btn btn-danger" value="Eliminar" id="btnEliminarArticulo" />
+    </form>
+</div>
+
+
+
+<!--Registro de Categoria-->
+<div class="col-md-3">
+    <form>
+        <h2>REGISTRAR CATEGORIA</h2>
+        <input type="text" id="NombreCategoria" placeholder="Ingresa el nombre" class="form-control" /><br />
+        <input type="text" id="DescripcionCategoria" placeholder="Ingresa la descripcion" class="form-control" /><br />
+        <input type="text" id="CondicionCategoria" placeholder="Ingresa la condicion (true/false)" class="form-control" /><br /><br />
+        <input type="text" id="IdCategoria" placeholder="Ingresa el id de la categoria" class="form-control" /><br />
+
+        <input type="button" class="btn btn-success" value="Guardar" id="btnGuardarCategoria" />
+        <input type="button" class="btn btn-primary" value="Actualizar" id="btnActualizarCategoria" />
+        <input type="button" class="btn btn-danger" value="Eliminar" id="btnEliminarCategoria" />
+    </form>
+</div>
+
+
+
+<!--Tabla de Ventas-->
+<div class="col-md-12">
+    <h2>TABLA DE TODAS LAS VENTAS</h2>
+    <div class="card-body">
+        <div class="col-md-12">
+            <table id="gridVentasAll" class="table table-bordered"></table>
+            <input type="button" class="btn btn-primary" value="Actualizar" id="btnActualizarVentasAll" />
+        </div>
+    </div>
+</div>
+
+
+
+<!--Tabla de Ventas por Dia-->
+<div class="col-md-12">
+    <h2>TABLA DE VENTAS POR DIA</h2>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-3 form-group">
+                <input type="text" id="ventaDia" placeholder="dd/mm/aaaa" class="form-control" />
+            </div>
+            <div class="col-md-3 form-group">
+                <input type="button" class="btn btn-info" value="Buscar" id="btnBuscarVentasDia" />
+            </div>
+        </div>
+
+        <div class="col-md-12">
+
+            <table id="tablaVentas" class="table table-bordered"></table>
+            <table id="tablaDetalleVenta" class="table table-bordered"></table>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!--Maximo Stock-->
+<div class="col-md-4">
+    <h2>MAXIMO STOCK</h2>
+    <input type="text" id="maxStock" placeholder="Maximo stock" class="form-control" readonly /><br />
+    <input type="button" class="btn btn-info" value="Buscar" id="btnBuscarStockMax" />
+</div>
+
+
+
+<!--Minimo Stock-->
+<div class="col-md-4">
+    <h2>MINIMO STOCK</h2>
+    <input type="text" id="minStock" placeholder="Minimo stock" class="form-control" readonly /><br />
+    <input type="button" class="btn btn-info" value="Buscar" id="btnBuscarStockMin" />
+</div>
+
+
+
+<!--Suma Ventas-->
+<div class="col-md-4">
+    <h2>SUMA VENTAS</h2>
+    <input type="text" id="sumVentas" placeholder="Suma ventas" class="form-control" readonly /><br />
+    <input type="button" class="btn btn-info" value="Buscar" id="btnSumarVentas" />
+</div>
+
+
+<link href="~/Content/toastr.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/toastr.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<!--Scripst Datas-->
+<script src="~/Scripts/data-ventas.js"></script>
+<script src="~/Scripts/data-persona.js"></script>
+<script src="~/Scripts/data-articulo.js"></script>
+<script src="~/Scripts/data-categorias.js"></script>
+<script src="~/Scripts/data-detalleventa.js"></script>
